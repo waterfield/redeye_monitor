@@ -7,6 +7,7 @@ gem 'rails', '3.2.2'
 
 gem 'sqlite3'
 
+gem 'decent_exposure'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,7 +18,14 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
+  gem 'haml'
   gem 'uglifier', '>= 1.0.3'
+  gem 'rails-backbone'
+  gem 'handlebars_assets'
+end
+
+group :test do
+  
 end
 
 gem 'jquery-rails'

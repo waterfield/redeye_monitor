@@ -1,0 +1,35 @@
+body
+  width: 100%
+  margin: 0
+  font-family: Arial
+
+// Spans across the page
+@mixin header
+  width: 100%
+  padding: 5px
+  margin: 0
+
+// Contains the project name and some stats
+#header
+  @include header
+  #project_name
+    font-size: 200%
+    font-weight: bold
+    height: 100%
+
+// Make a horizontal nav list, white on black
+#navbar ul
+  @include header
+  list-style: none
+  background: black
+  color: white
+  
+  li
+    display: inline-block
+    margin: 0 10px 0 15px
+    
+    // current and hovered menu items get color
+    &.selected
+      background: red
+    &.hover
+      background: blue
