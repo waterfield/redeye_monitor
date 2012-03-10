@@ -1,13 +1,17 @@
+- content_for :title, project.name
+
 %section#header
   %div#project_name= project.name
 
 %section#navbar
   %nav
     %ul
-      %li#keyspace Keyspace
-      %li#audit    Audit
-      %li#watch    Watch
+      %li#keyspace.selected Keyspace
+      %li#audit Audit
+      %li#watch Watch
       %li#settings Settings
 
 %section#main
   TODO
+
+= render 'bootstrap'

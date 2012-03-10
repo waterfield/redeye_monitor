@@ -1,3 +1,5 @@
+require 'consts'
+
 class Worker < ActiveRecord::Base
   belongs_to :project
   has_many :params
@@ -8,5 +10,9 @@ class Worker < ActiveRecord::Base
   
   def to_s
     [prefix, *params].join Consts.arg_sep
+  end
+  
+  def as_json options={}
+    super options.merge(:include => [:in_links, :out_links])
   end
 end
